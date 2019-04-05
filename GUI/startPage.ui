@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>530</width>
-    <height>278</height>
+    <width>480</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,19 +17,19 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>481</width>
-      <height>221</height>
+      <x>-10</x>
+      <y>-10</y>
+      <width>491</width>
+      <height>331</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="2" column="0">
-      <widget class="QPushButton" name="NewGameButton">
+      <widget class="QPushButton" name="newGame">
        <property name="font">
         <font>
          <family>Bitstream Charter</family>
-         <pointsize>18</pointsize>
+         <pointsize>25</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -50,11 +50,11 @@
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="ContinueButton">
+      <widget class="QPushButton" name="cont">
        <property name="font">
         <font>
          <family>Bitstream Charter</family>
-         <pointsize>18</pointsize>
+         <pointsize>25</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -69,11 +69,11 @@
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QPushButton" name="ExitButton">
+      <widget class="QPushButton" name="exit">
        <property name="font">
         <font>
          <family>Bitstream Charter</family>
-         <pointsize>18</pointsize>
+         <pointsize>25</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -92,7 +92,7 @@
        <property name="font">
         <font>
          <family>Bitstream Charter</family>
-         <pointsize>18</pointsize>
+         <pointsize>40</pointsize>
          <italic>true</italic>
         </font>
        </property>
