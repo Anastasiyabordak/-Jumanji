@@ -17,9 +17,9 @@
    <widget class="QLabel" name="question">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
-      <width>231</width>
+      <x>10</x>
+      <y>50</y>
+      <width>461</width>
       <height>81</height>
      </rect>
     </property>
@@ -63,7 +63,7 @@
      </font>
     </property>
     <property name="text">
-     <string>One</string>
+     <string>Pass</string>
     </property>
     <property name="iconSize">
      <size>
@@ -89,7 +89,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Two</string>
+     <string>Done</string>
     </property>
    </widget>
    <widget class="QPushButton" name="three">
@@ -97,7 +97,7 @@
      <rect>
       <x>20</x>
       <y>230</y>
-      <width>182</width>
+      <width>441</width>
       <height>61</height>
      </rect>
     </property>
@@ -109,27 +109,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Three</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="four">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>230</y>
-      <width>181</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bitstream Charter</family>
-      <pointsize>20</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="text">
-     <string>Four</string>
+     <string>Done</string>
     </property>
    </widget>
    <widget class="QPushButton" name="back">
@@ -150,6 +130,29 @@
     </property>
     <property name="text">
      <string>Jumanji</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="id">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>0</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>15</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>&quot;&quot;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

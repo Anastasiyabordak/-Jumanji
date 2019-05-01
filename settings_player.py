@@ -8,7 +8,7 @@ from game import GameWindow
 class PlayerWindow(QtWidgets.QMainWindow):
 
     def __init__(self, mainWindow, themes):
-        self.theme = ['1', '2', '3', '4']
+        self.theme = ['2', '3', '4']
         super().__init__()
         self.initUI()
         self.mainWindow = mainWindow
