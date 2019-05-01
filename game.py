@@ -2,17 +2,23 @@ import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5 import uic
 from PyQt5.QtWidgets import QFileDialog
-# from ImageWindow import ImageWindow
-# from LoginWindow import LoginWindow
+import pandas as pd
 
 
 class GameWindow(QtWidgets.QMainWindow):
 
-    def __init__(self, mainWindow):
+    def __init__(self, mainWindow, theme, players):
 
         super().__init__()
         self.initUI()
         self.mainWindow = mainWindow
+        self.theme = theme
+        self.players = players
+        print("theme: ", self.theme)
+        print("players: ", self.players)
+        self.df = pd.read_csv('data/music.csv')
+        print(self.df)
+
     def initUI(self):
         uic.loadUi("GUI/game.ui", self)
         self.back.clicked.connect(self.showMainWindow)

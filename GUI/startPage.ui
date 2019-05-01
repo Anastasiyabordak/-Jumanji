@@ -50,25 +50,6 @@
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="cont">
-       <property name="font">
-        <font>
-         <family>Bitstream Charter</family>
-         <pointsize>25</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Continue</string>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
       <widget class="QPushButton" name="exit">
        <property name="font">
         <font>

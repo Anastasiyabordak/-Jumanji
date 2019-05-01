@@ -2,7 +2,7 @@ import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5 import uic
 from PyQt5.QtWidgets import QFileDialog
-from game import GameWindow
+from settings_player import PlayerWindow
 
 
 class ThemeWindow(QtWidgets.QMainWindow):
@@ -14,7 +14,7 @@ class ThemeWindow(QtWidgets.QMainWindow):
         self.mainWindow = mainWindow
 
     def initUI(self):
-        uic.loadUi("GUI/settings.ui", self)
+        uic.loadUi("GUI/settings_theme.ui", self)
         self.back.clicked.connect(self.showMainWindow)
         self.themeBox.addItems(self.theme)
         self.select.clicked.connect(self.nextWindow)
@@ -23,7 +23,7 @@ class ThemeWindow(QtWidgets.QMainWindow):
 
     def nextWindow(self):
         global image_ui
-        image_ui = GameWindow(self.mainWindow)
+        image_ui = PlayerWindow(self.mainWindow, self.themeBox.currentText())
         image_ui.show()
         self.close()
 

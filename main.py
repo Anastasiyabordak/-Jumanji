@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets, QtGui
 from PyQt5 import uic
 from PyQt5.QtWidgets import QFileDialog
 from game import GameWindow
-from settings import ThemeWindow
+from settings_theme import ThemeWindow
 # from LoginWindow import LoginWindow
 
 
@@ -16,7 +16,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def initUI(self):
         uic.loadUi("GUI/startPage.ui", self)
         self.newGame.clicked.connect(self.nGame)
-        self.cont.clicked.connect(self.Continue)
+       # self.cont.clicked.connect(self.Continue)
         self.exit.clicked.connect(self.Exit)
         self.show()
         self.setFixedSize(480, 320)
