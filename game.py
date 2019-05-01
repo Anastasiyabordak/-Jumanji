@@ -2,8 +2,8 @@ import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5 import uic
 from PyQt5.QtWidgets import QFileDialog
-import pandas as pd
 import random
+import csv 
 
 class GameWindow(QtWidgets.QMainWindow):
 
@@ -16,12 +16,17 @@ class GameWindow(QtWidgets.QMainWindow):
         self.players = players
         print("theme: ", self.theme)
         print("players: ", self.players)
-        self.df = pd.read_csv('data/music.csv')
+        self.df = []
+        with open('data/music.csv', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                self.df.append(row)
         self.max_question = len(self.df)
         self.scores = [0,0,0,0]
         self.player = 0
         self.setPlayer()
-        self.question.setText(self.df.iloc[random.randint(1,self.max_question-1)]['faq'])
+        print(self.df[0][0])
+        self.question.setText(self.df[random.randint(1,self.max_question-1)][0])
 
     def initUI(self):
         uic.loadUi("GUI/game.ui", self)
@@ -39,7 +44,7 @@ class GameWindow(QtWidgets.QMainWindow):
     def oneB(self):
         print("not done")
         print("Player:", self.player%int(self.players))
-        self.question.setText(self.df.iloc[random.randint(1,self.max_question-1)]['faq'])
+        self.question.setText(self.df[random.randint(1,self.max_question-1)][0])
         self.player = self.player + 1 
         self.setPlayer()
         
@@ -59,7 +64,7 @@ class GameWindow(QtWidgets.QMainWindow):
         self.two.setVisible(True)
         self.one.setVisible(True)
         self.three.setVisible(False)
-        self.question.setText(self.df.iloc[random.randint(1,self.max_question-1)]['faq'])
+        self.question.setText(self.df[random.randint(1,self.max_question-1)][0])
         score = random.randint(1,6)
         self.scores[self.player%int(self.players)] = self.scores[self.player%int(self.players)] + score
         print("Score: ", score)   
