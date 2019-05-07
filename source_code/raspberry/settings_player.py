@@ -15,12 +15,12 @@ class PlayerWindow(QtWidgets.QMainWindow):
         self.theme = themes
 
     def initUI(self):
-        uic.loadUi("GUI/settings_player.ui", self)
+        uic.loadUi("/home/pi/Desktop/gui/Jumanji/GUI/settings_player.ui", self)
         self.back.clicked.connect(self.showMainWindow)
         self.themeBox.addItems(self.theme)
         self.select.clicked.connect(self.nextWindow)
         self.show()
-        self.setFixedSize(480, 320)
+        self.showFullScreen()
 
     def nextWindow(self):
         global image_ui
